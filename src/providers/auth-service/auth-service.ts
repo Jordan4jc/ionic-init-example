@@ -4,7 +4,6 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import {JwtHelper} from "angular2-jwt";
-import {Storage} from "@ionic/storage";
 
 export class User {
   user_first_name: string;
