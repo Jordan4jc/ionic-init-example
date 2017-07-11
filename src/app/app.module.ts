@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -16,6 +17,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     HttpModule,
     JsonpModule
   ],
