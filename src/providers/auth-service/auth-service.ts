@@ -34,7 +34,6 @@ export class AuthServiceProvider {
     if(credentials.user_phone === null || credentials.user_pass === null){
       return Observable.throw("Please insert credentials");
     }else{
-      console.log(credentials);
       return this.http.post(this.LOGIN_URL, JSON.stringify(credentials), { headers: this.contentHeader })
       .map(this.extractData)
       .catch(this.handleError);
