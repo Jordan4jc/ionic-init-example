@@ -24,7 +24,7 @@ export class LoginPage {
       if (allowed) {
         this.storage.set('profile',allowed.user[0]);
         this.storage.set('token',allowed.token);
-        this.nav.setRoot('HomePage');
+        this.nav.setRoot('EventsPage');
       } else {
         this.showError("Access Denied");
       }

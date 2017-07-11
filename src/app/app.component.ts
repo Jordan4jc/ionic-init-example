@@ -18,7 +18,7 @@ export class MyApp {
           if(!this.jwtHelper.isTokenExpired(token)){
             storage.get('profile').then((profile)=>{
               if(profile){
-                this.rootPage = 'HomePage';
+                this.rootPage = 'EventsPage';
               }else{
                 this.rootPage = 'LoginPage';
               }
