@@ -18,6 +18,7 @@ export class MyApp {
           if(!this.jwtHelper.isTokenExpired(token)){
             storage.get('profile').then((profile)=>{
               if(profile){
+                console.log('go to events page');
                 this.rootPage = 'EventsPage';
               }else{
                 this.rootPage = 'LoginPage';
@@ -32,8 +33,6 @@ export class MyApp {
           this.rootPage = 'LoginPage';
         });
       });
-      statusBar.overlaysWebView(false);
-      statusBar.hide();
       splashScreen.hide();
     });
   }
