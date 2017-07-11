@@ -8,7 +8,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -29,8 +28,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
