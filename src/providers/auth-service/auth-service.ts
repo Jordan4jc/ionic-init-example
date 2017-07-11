@@ -50,7 +50,9 @@ export class AuthServiceProvider {
 
   private extractData(res: Response) {
     let body = res.json();
-    return body.data || {};
+    this.error = null;
+    this.user = body.user[0];
+    return body || {};
   }
 
   private handleError (error: Response | any) {
